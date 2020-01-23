@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBe3zaMhqhfOVmCV714lVU03g9ajcTHk1U",
-    authDomain: "tour-99fbe.firebaseapp.com",
-    databaseURL: "https://tour-99fbe.firebaseio.com",
-    projectId: "tour-99fbe",
-    storageBucket: "tour-99fbe.appspot.com",
-    messagingSenderId: "960126775680",
-    appId: "1:960126775680:web:21d7e3fed960af72985165",
-    measurementId: "G-4TZ44G3NT1"
+    apiKey: "AIzaSyC65FRSHXCslGdeDZKrvWnPwh9lzhXg2d8",
+    authDomain: "hacka20.firebaseapp.com",
+    databaseURL: "https://hacka20.firebaseio.com",
+    projectId: "hacka20",
+    storageBucket: "hacka20.appspot.com",
+    messagingSenderId: "42051592000",
+    appId: "1:42051592000:web:f8f0bf0565d041e67824a5",
+    measurementId: "G-EBHMMVV1Z2"
   }
 };
 
