@@ -8,7 +8,7 @@ import { AuthService } from 'src/services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hacka';
+  title = 'Right Now I Am';
   message = 'no user'
 
   constructor(private db: AngularFirestore, private auth: AuthService) {
