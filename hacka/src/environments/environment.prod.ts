@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyC65FRSHXCslGdeDZKrvWnPwh9lzhXg2d8",
-    authDomain: "hacka20.firebaseapp.com",
-    databaseURL: "https://hacka20.firebaseio.com",
-    projectId: "hacka20",
-    storageBucket: "hacka20.appspot.com",
-    messagingSenderId: "42051592000",
-    appId: "1:42051592000:web:f8f0bf0565d041e67824a5",
-    measurementId: "G-EBHMMVV1Z2"
+    apiKey: "AIzaSyC-YKwnSBYY2FTtay7tzDNTQaZKKEInWsg",
+    authDomain: "rightnowifeel.firebaseapp.com",
+    databaseURL: "https://rightnowifeel.firebaseio.com",
+    projectId: "rightnowifeel",
+    storageBucket: "rightnowifeel.appspot.com",
+    messagingSenderId: "504406690261",
+    appId: "1:504406690261:web:1f1cc9b7510548d35a155c",
+    measurementId: "G-56JESNJNJD"
   }
 };
