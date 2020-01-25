@@ -51,6 +51,8 @@
       transition: transform 0.3s;
 
       a {
+        display: block;
+        padding: 4px;
         text-decoration: none;
         color: inherit;
         display: block;
@@ -76,6 +78,8 @@
 
     &.show {
       display: block;
+      background-color: black;
+      opacity: 0.3;
     }
   }
 }

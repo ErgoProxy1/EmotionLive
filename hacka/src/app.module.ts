@@ -17,12 +17,14 @@ import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component';
 import { DataComponent } from './app/data/data.component';
 import { HeaderComponent } from './app/header/header.component';
+import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/results-how-do-you-feel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HowDoYouFeelComponent,
     WhyDoYouFeelComponent,
+    ResultsHowDoYouFeelComponent,
     HomeComponent,
     AboutFaqComponent,
     DataComponent,
