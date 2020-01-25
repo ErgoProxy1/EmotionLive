@@ -9,17 +9,9 @@ import { AuthService } from 'src/services/auth.service';
 })
 export class AppComponent {
   title = 'Right Now I Am';
-  message = 'no user'
 
   constructor(private db: AngularFirestore, private auth: AuthService) {
-
+    
   }
 
-  test(): void {
-    this.auth.doLogin("test@test.com", "123456").then(() => {
-      this.message = `Welcome ${this.auth.fbAuth.auth.currentUser.email}`
-    }).catch((err) => {
-      this.message = `ERROR: ${err}`;
-    });
-  }
 }
