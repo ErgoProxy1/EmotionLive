@@ -1,4 +1,4 @@
-    :host {
+:host {
 
     img {
         -webkit-user-select: none; /* Safari */        
@@ -28,17 +28,21 @@
 
         .emotion {
             position: relative;
-        
-            &.selected:before {
-                position: absolute;
-                right: 10px;
+
+            &.selected {
+                transform: scale(1.03);
+            }
+
+            &.selected:after {
+                top: -1px;
+                right: -1px;
+                left: -1px;
+                bottom: -1px;
                 content: '';
-                display: block;
-                height: 15px;
-                width: 10px;
-                transform: rotate(45deg);
-                border-bottom: solid 1px;
-                border-right: solid 1px;
+                position: absolute;
+                transform: scale(1);
+                border: 3px solid;
+                border-radius: 5px;
             }
 
             p {
@@ -107,4 +111,4 @@
             transition-duration: 0.2s;
             outline-offset: solid 3px;
         }
-    }
+}
