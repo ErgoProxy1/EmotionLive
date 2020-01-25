@@ -1,44 +1,110 @@
-:host {
-  .emotions-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    :host {
 
-    @media (min-width: 768px){
-      grid-template-columns: 1fr 1fr 1fr;
+    img {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
+    }
+  
+    .emotions-list {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .emotion {
+            position: relative;
+        
+            &.selected:before {
+                position: absolute;
+                right: 10px;
+                content: '';
+                display: block;
+                height: 15px;
+                width: 10px;
+                transform: rotate(45deg);
+                border-bottom: solid 1px;
+                border-right: solid 1px;
+            }
+
+            p {
+                background: none;
+                font-size: 18px;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+
+            &.joy {
+                background-color: rgb(160, 228, 147);
+            }
+
+            &.anger {
+                background-color: rgb(230, 113, 113);
+            }
+
+            &.sadness {
+                background-color: rgb(49, 64, 196);
+            }
+
+            &.disgust {
+                background-color: rgb(128, 77, 128);
+            }
+
+            &.fear {
+                background-color: rgb(235, 145, 61);
+            }
+
+            &.surprise {
+                background-color: rgb(236, 222, 142);
+            }
+        }
     }
 
-    .emotion {
+    .next {
+        margin: 0 20px 20px 0;
+        width: 80px;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin-left: auto;
+        transition-duration: 0.2s;
+        border: 1px solid;
 
-      p {
-        background: none;
-        font-size: 100px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      }
+            &:hover {
+                background-color: white;
+                color: black;
+            }
 
-      &.joy {
-        background-color: rgb(160, 228, 147);
-      }
+            &:disabled {
+                opacity: 0.4;
 
-      &.anger {
-        background-color: rgb(230, 113, 113);
-      }
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
 
-      &.sadness {
-        background-color: rgb(49, 64, 196);
-      }
-
-      &.disgust {
-        background-color: rgb(128, 77, 128);
-      }
-
-      &.fear {
-        background-color: rgb(235, 145, 61);
-      }
-
-      &.surprise {
-        background-color: rgb(236, 222, 142);
-      }
+        .selected {
+            transition-duration: 0.2s;
+            outline-offset: solid 3px;
+        }
     }
-  }
-}
