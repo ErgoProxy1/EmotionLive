@@ -74,7 +74,8 @@
     }
 
     .next {
-        width: 60px;
+        margin: 0 20px 20px 0;
+        width: 80px;
         background-color: black;
         border: none;
         color: white;
@@ -90,6 +91,15 @@
             &:hover {
                 background-color: white;
                 color: black;
+            }
+
+            &:disabled {
+                opacity: 0.4;
+
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
             }
         }
 
