@@ -1,14 +1,14 @@
 export const REASONS = [
-  { emotions: ['anger', 'sadness'], reason: 'someone was mean', imageUrl: '/' },
-  { emotions: ['anger', 'sadness', 'surprise'], reason: 'something broke', imageUrl: '/' },
-  { emotions: ['anger', 'sadness'], reason: 'you miss someone', imageUrl: '/' },
-  { emotions: ['anger', 'sadness'], reason: 'you want something', imageUrl: '/' },
-  { emotions: ['anger', 'sadness', 'fear', 'surprise'], reason: 'someone scared me', imageUrl: '/' },
-  { emotions: ['fear', 'disgust'], reason: 'i saw a spider', imageUrl: '/' },
-  { emotions: ['fear'], reason: 'i don\'t know what\'s going on', imageUrl: '/' },
-  { emotions: ['fear'], reason: 'i am lost', imageUrl: '/' },
-  { emotions: ['disgust'], reason: 'something is not clean', imageUrl: '/' },
-  { emotions: ['joy'], reason: 'i like the activity', imageUrl: '/' },
-  { emotions: ['joy'], reason: 'i am feeling well', imageUrl: '/' },
-  { emotions: ['joy'], reason: 'i found something funny', imageUrl : '/'}
+  { id: 1, emotions: ['anger', 'sadness'], reason: 'someone was mean', imageUrl: '/' },
+  { id: 2, emotions: ['anger', 'sadness', 'surprise'], reason: 'something broke', imageUrl: '/' },
+  { id: 3, emotions: ['anger', 'sadness'], reason: 'you miss someone', imageUrl: '/' },
+  { id: 4, emotions: ['anger', 'sadness'], reason: 'you want something', imageUrl: '/' },
+  { id: 5, emotions: ['anger', 'sadness', 'fear', 'surprise'], reason: 'someone scared you', imageUrl: '/' },
+  { id: 6, emotions: ['fear', 'disgust'], reason: 'you saw a spider', imageUrl: '/' },
+  { id: 7, emotions: ['fear'], reason: 'you don\'t know what\'s going on', imageUrl: '/' },
+  { id: 8, emotions: ['fear'], reason: 'you are lost', imageUrl: '/' },
+  { id: 9, emotions: ['disgust'], reason: 'something is not clean', imageUrl: '/' },
+  { id: 10, emotions: ['joy'], reason: 'you like the activity', imageUrl: '/' },
+  { id: 11, emotions: ['joy'], reason: 'you are feeling well', imageUrl: '/' },
+  { id: 12, emotions: ['joy'], reason: 'you found something funny', imageUrl : '/'}
 ];
