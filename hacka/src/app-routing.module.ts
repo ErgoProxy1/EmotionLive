@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'why-do-you-feel/:emotion', component: WhyDoYouFeelComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-faq', component: AboutFaqComponent },
-  { path: 'results-you-feel', component: ResultsYouFeelComponent }
+  { path: 'results-you-feel', component: ResultsYouFeelComponent },
   { path: 'data', component: DataComponent }
 ];
 
