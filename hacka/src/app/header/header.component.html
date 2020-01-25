@@ -6,6 +6,7 @@
     </button>
   </div>
   <div class="navigation" [class.show]="showNavigation">
+    <a routerLink="/home" (click)="hideNav()"><fa-icon [icon]="homeIcon"></fa-icon></a>
     <a routerLink="/how-do-you-feel" (click)="hideNav()">Express emotions</a>
     <a routerLink="/how-do-you-feel" (click)="hideNav()">Recognize emotions</a>
     <a routerLink="/about-faq" (click)="hideNav()">FAQ</a>
