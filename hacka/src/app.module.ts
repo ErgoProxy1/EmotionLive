@@ -30,7 +30,7 @@ import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/resu
     HomeComponent,
     AboutFaqComponent,
     HeaderComponent,
-    ResultsYouFeelComponent,
+    ResultsHowDoYouFeelComponent,
     DataComponent,
     LoginComponent,
     SignUpComponent,

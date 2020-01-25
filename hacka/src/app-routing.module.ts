@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'about-faq', component: AboutFaqComponent },
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent},
-  { path: 'results-you-feel', component: ResultsYouFeelComponent },
+  { path: 'results-you-feel', component: ResultsHowDoYouFeelComponent },
   { path: 'data', component: DataComponent }
 ];
 
