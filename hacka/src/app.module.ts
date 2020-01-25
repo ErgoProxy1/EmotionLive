@@ -16,6 +16,7 @@ import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.com
 import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component';
 import { HeaderComponent } from './app/header/header.component';
+import { SignInComponent } from './app/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HeaderComponent } from './app/header/header.component';
     WhyDoYouFeelComponent,
     HomeComponent,
     AboutFaqComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
