@@ -16,6 +16,7 @@ import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.com
 import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component';
 import { ResultsYouFeelComponent } from './app/results-you-feel/results-you-feel.component';
+import { HeaderComponent } from './app/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResultsYouFeelComponent } from './app/results-you-feel/results-you-feel
     WhyDoYouFeelComponent,
     HomeComponent,
     AboutFaqComponent,
-    ResultsYouFeelComponent
+    ResultsYouFeelComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
