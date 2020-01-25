@@ -1,0 +1,13 @@
+<header>
+  <div class="top-bar">
+    <a class="logo" routerLink="/home">Emotion App</a>
+    <button type="button" class="hamburger" (click)="toggleNav()">
+      <img src="./assets/hamburger.png"/>
+    </button>
+  </div>
+  <div class="navigation" [class.show]="showNavigation">
+      <a routerLink="/about-faq" (click)="hideNav()">What are we about?</a>
+  </div>
+</header>
+
+<div class="modal" [class.show]="showNavigation" (click)="hideNav()"></div>
