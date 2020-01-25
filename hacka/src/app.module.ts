@@ -14,13 +14,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HowDoYouFeelComponent } from './app/how-do-you-feel/how-do-you-feel.component';
 import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.component';
 import { HomeComponent } from './app/home/home.component';
+import { AboutFaqComponent } from './app/about-faq/about-faq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HowDoYouFeelComponent,
     WhyDoYouFeelComponent,
-    HomeComponent
+    HomeComponent,
+    AboutFaqComponent
   ],
   imports: [
     BrowserModule,
