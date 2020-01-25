@@ -1,14 +1,14 @@
 <a routerLink="/home">Go back</a>
 <h1>How do you feel?</h1>
 <div class="emotions-list">
-  <div class="card emotion {{emotion.name}}"
+  <div class="card emotion {{ emotion.name }}"
     *ngFor="let emotion of emotionChoices"
+    [class.selected]='selectedEmotion == emotion'
     (click)="selectEmotion(emotion)">
-    <img src="{{emotion.imageUrl}}" alt="{{emotion.name }}">
-    <p>{{emotion.name | titlecase}}</p>
+    <img src="{{ emotion.imageUrl }}" alt="{{ emotion.name }}">
+    <p>{{ emotion.name | titlecase }}</p>
   </div>
 </div>
 
-<div *ngIf="selectedEmotion">
-    <a routerLink='/why-do-you-feel/{{selectedEmotion.name}}'>Next</a> 
-</div>
+<a *ngIf="selectedEmotion" routerLink='/why-do-you-feel/{{selectedEmotion.name}}' class="next">Next</a> 
+
