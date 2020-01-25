@@ -17,7 +17,6 @@ export class HowDoYouFeelComponent implements OnInit {
   }
 
   selectEmotion(emotion: EmotionChoice): void {
-    this.selectedEmotion = emotion;
+    this.selectedEmotion == emotion ? this.selectedEmotion = null : this.selectedEmotion = emotion;
   }
-
 }
