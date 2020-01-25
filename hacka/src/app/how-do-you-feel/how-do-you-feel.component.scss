@@ -1,0 +1,37 @@
+:host {
+  .emotions-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @media (min-width: 768px){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .emotion {
+      &.joy p {
+        background-color: rgb(160, 228, 147);
+      }
+
+      &.anger p {
+        background-color: rgb(230, 113, 113);
+      }
+
+      &.sadness p {
+        background-color: lightblue;
+      }
+
+      &.disgust p {
+        background-color: rgb(128, 77, 128);
+      }
+
+      &.fear p {
+        background-color: rgb(68, 68, 68);
+      }
+
+      &.surprise p {
+        background-color: rgb(236, 222, 142);
+      }
+    }
+  }
+}

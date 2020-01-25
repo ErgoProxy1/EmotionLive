@@ -11,10 +11,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HowDoYouFeelComponent } from './app/how-do-you-feel/how-do-you-feel.component';
+import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.component';
+import { HomeComponent } from './app/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HowDoYouFeelComponent,
+    WhyDoYouFeelComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

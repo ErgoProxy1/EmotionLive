@@ -1,0 +1,8 @@
+<a routerLink="/how-do-you-feel">Go back</a>
+<h1>Why do you feel {{emotion.name}}?</h1>
+<div class="reasons-list">
+  <div class="card reason {{reason.name}}" *ngFor="let reason of reasons">
+    <img src="{{reason.imageUrl}}" alt="{{reason.reason}}">
+    <p>{{reason.reason | titlecase}}</p>
+  </div>
+</div>
