@@ -9,8 +9,9 @@ import { REASONS } from '../consts/reasons';
   styleUrls: ['./why-do-you-feel.component.scss']
 })
 export class WhyDoYouFeelComponent implements OnInit {
-  @Input() emotion: string = this.route.snapshot.paramMap.get('emotion');;
+  @Input() emotion: string = this.route.snapshot.paramMap.get('emotion');
   reasons: Array<{}>;
+  selectedReason: {};
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +33,10 @@ export class WhyDoYouFeelComponent implements OnInit {
         this.reasons.push(reason);
       }
     });
+  }
+
+  selectReason(reason: {}): void {
+    this.selectedReason = reason;
   }
 
 }

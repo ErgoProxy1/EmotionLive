@@ -15,17 +15,18 @@ import { HowDoYouFeelComponent } from './app/how-do-you-feel/how-do-you-feel.com
 import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.component';
 import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component';
-import { ResultsYouFeelComponent } from './app/results-you-feel/results-you-feel.component';
 import { DataComponent } from './app/data/data.component';
 import { HeaderComponent } from './app/header/header.component';
 import { LoginComponent } from './app/login/login.component';
 import { SignUpComponent } from './app/sign-up/sign-up.component';
+import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/results-how-do-you-feel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HowDoYouFeelComponent,
     WhyDoYouFeelComponent,
+    ResultsHowDoYouFeelComponent,
     HomeComponent,
     AboutFaqComponent,
     HeaderComponent,
