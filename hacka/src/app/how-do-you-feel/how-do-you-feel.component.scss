@@ -9,27 +9,32 @@
     }
 
     .emotion {
-      &.joy p {
+
+      p {
+        background: none;
+      }
+
+      &.joy {
         background-color: rgb(160, 228, 147);
       }
 
-      &.anger p {
+      &.anger {
         background-color: rgb(230, 113, 113);
       }
 
-      &.sadness p {
+      &.sadness {
         background-color: lightblue;
       }
 
-      &.disgust p {
+      &.disgust {
         background-color: rgb(128, 77, 128);
       }
 
-      &.fear p {
+      &.fear {
         background-color: rgb(68, 68, 68);
       }
 
-      &.surprise p {
+      &.surprise {
         background-color: rgb(236, 222, 142);
       }
     }

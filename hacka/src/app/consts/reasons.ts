@@ -9,5 +9,6 @@ export const REASONS = [
   { emotions: ['fear'], reason: 'i am lost', imageUrl: '/' },
   { emotions: ['disgust'], reason: 'something is not clean', imageUrl: '/' },
   { emotions: ['joy'], reason: 'i like the activity', imageUrl: '/' },
-  { emotions: ['joy'], reason: 'i am feeling well', imageUrl: '/' }
+  { emotions: ['joy'], reason: 'i am feeling well', imageUrl: '/' },
+  { emotions: ['joy'], reason: 'i found something funny', imageUrl : '/'}
 ];
