@@ -10,5 +10,5 @@
   </div>
 </div>
 
-<a *ngIf="selectedEmotion" routerLink='/why-do-you-feel/{{selectedEmotion.name}}' class="next">Next</a> 
+<button (click)="clickNext();" class="next" [disabled]="!selectedEmotion">Next</button> 
 
