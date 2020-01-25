@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Montserrat', Arial;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 5px; 
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  img {
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 700;
+    background-color: gray;
+    color: white;
+  }
+}
