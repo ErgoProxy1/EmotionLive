@@ -2,13 +2,18 @@
   <div class="top-bar">
     <a class="logo" routerLink="/home">Emotion App</a>
     <button type="button" class="hamburger" (click)="toggleNav()">
-      <img src="./assets/hamburger.png"/>
+      <img src="./assets/hamburger.png" />
     </button>
   </div>
   <div class="navigation" [class.show]="showNavigation">
+    <div *ngIf="!(auth.user | async)">
       <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
       <a routerLink="/login" (click)="hideNav()">Login</a>
-      <a routerLink="/about-faq" (click)="hideNav()">FAQ</a>
+    </div>
+    <a routerLink="/about-faq" (click)="hideNav()">FAQ</a>
+    <div *ngIf="(auth.user | async)">
+      <a (click)="hideNav(); logout()">Logout</a>
+    </div>
   </div>
 </header>
 

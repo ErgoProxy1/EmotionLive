@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,12 @@ import * as firebase from 'firebase/app';
 export class AuthService {
 
   username: string;
-  errorMessage: string;
+
+  loggedIn = false;
+  user: Observable<firebase.User>;
 
   constructor(public fbAuth: AngularFireAuth) {
-
+    this.user = fbAuth.authState;
   }
 
   doRegister(username: string, email: string, password: string) {
@@ -36,6 +39,7 @@ export class AuthService {
           user.updateProfile({
             displayName: this.username
           }).then(() => {
+            this.user = this.fbAuth.authState;
             this.username = user.displayName;
             resolve("")
           }).catch((err) => {
@@ -49,6 +53,7 @@ export class AuthService {
   doLogin(email: string, password: string) {
     return new Promise<firebase.auth.UserCredential>((resolve, reject) => {
       this.fbAuth.auth.signInWithEmailAndPassword(email, password).then(res => {
+        this.user = this.fbAuth.authState;
         resolve(res);
       }, err => reject(err));
     })

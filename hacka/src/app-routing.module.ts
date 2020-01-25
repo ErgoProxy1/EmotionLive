@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'how-do-you-feel', component: HowDoYouFeelComponent },
   { path: 'why-do-you-feel/:emotion', component: WhyDoYouFeelComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'about-faq', component: AboutFaqComponent },,
+  { path: 'about-faq', component: AboutFaqComponent },
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'results-you-feel', component: ResultsYouFeelComponent },
