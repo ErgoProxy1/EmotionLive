@@ -6,6 +6,8 @@ import { WhyDoYouFeelComponent } from './app/why-do-you-feel/why-do-you-feel.com
 import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component'
 import { DataComponent } from './app/data/data.component';
+import { LoginComponent } from './app/login/login.component';
+import { SignUpComponent } from './app/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'why-do-you-feel/:emotion', component: WhyDoYouFeelComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-faq', component: AboutFaqComponent },
-  { path: 'data', component: DataComponent }
+  { path: 'data', component: DataComponent },
+  { path: 'login', component: LoginComponent},
+  { path: 'sign-up', component: SignUpComponent}
 ];
 
 @NgModule({

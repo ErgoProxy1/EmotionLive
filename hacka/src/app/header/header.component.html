@@ -7,7 +7,8 @@
   </div>
   <div class="navigation" [class.show]="showNavigation">
       <a routerLink="/about-faq" (click)="hideNav()">What are we about?</a>
-      <app-sign-in></app-sign-in>
+      <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
+      <a routerLink="/login" (click)="hideNav()">Login</a>
   </div>
 </header>
 
