@@ -17,6 +17,8 @@ import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component';
 import { DataComponent } from './app/data/data.component';
 import { HeaderComponent } from './app/header/header.component';
+import { LoginComponent } from './app/login/login.component';
+import { SignUpComponent } from './app/sign-up/sign-up.component';
 import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/results-how-do-you-feel.component';
 
 @NgModule({
@@ -27,8 +29,11 @@ import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/resu
     ResultsHowDoYouFeelComponent,
     HomeComponent,
     AboutFaqComponent,
+    HeaderComponent,
+    ResultsYouFeelComponent,
     DataComponent,
-    HeaderComponent
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
