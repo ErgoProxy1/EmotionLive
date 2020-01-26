@@ -1,0 +1,16 @@
+:host {
+  .countdown {
+    animation: countdown 1s;
+    width: 100%;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+
+  @keyframes countdown {
+    from {font-size: 100px;}
+    to {font-size: 50px;}
+  }
+}

@@ -7,12 +7,14 @@ import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/resu
 import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component'
 import { DataComponent } from './app/data/data.component';
+import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'how-do-you-feel', component: HowDoYouFeelComponent },
   { path: 'why-do-you-feel/:emotion', component: WhyDoYouFeelComponent },
   { path: 'results-how-do-you-feel/:emotion/:id', component: ResultsHowDoYouFeelComponent },
+  { path: 'recognize-emotions', component: RecognizeEmotionsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-faq', component: AboutFaqComponent },
   { path: 'data', component: DataComponent }

@@ -1,0 +1,18 @@
+<div *ngIf="state === 'pre-game'" class="pre-game">
+  <h1>Recognize emotions</h1>
+  <p>In this game, your objective is to try to match each face to the emotion that it conveys. <br />
+    You have 10 seconds to give your answer.<br />
+    A game contains 10 rounds.</p>
+  <button (click)="startCountdown()">Start playing</button>
+</div>
+
+<app-countdown *ngIf="state === 'countdown'" (onCountdownEnd)="startGame()"></app-countdown>
+
+<div *ngIf="state === 'game'" class="game">
+  <div class="game-container" [class.time]="!displayingResult">
+    <img class="image" [src]="correctOption.imageUrl">
+    <div class="option" *ngFor="let option of options" (click)="selectOption(option)" [class.selected]="option === selectedOption">
+      <p>{{option.name | titlecase}}</p>
+    </div>
+  </div>
+</div>
