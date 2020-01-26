@@ -57,11 +57,29 @@
                 border-radius: 5px;
             }
         }
+
+        .my-reason {
+            position: relative;
+            &:hover {
+                transform: scale(1.00);
+            }
+        }
     }
 
-    button {
+    .next {
         margin: 0 20px 20px auto;
         display: block;
+    }
+
+    .add-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .reason-input{
+        width: 95%;
     }
 
     .selected {

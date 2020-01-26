@@ -10,9 +10,10 @@
     <p>{{reason.reason | titlecase}}</p>
   </div>
 
-  <div class="card reason">
-    <input [(ngModel)]="current_reason">
-    <button (click)="addCustomReason()">+</button>
+  <div class="card my-reason">
+    <input class="reason-input" [(ngModel)]="current_reason" placeholder="My Reason">
+    <br>
+    <button class="add-button" (click)="addCustomReason()">+</button>
   </div>
 </div>
 <div>
