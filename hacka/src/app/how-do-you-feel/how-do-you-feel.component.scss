@@ -28,6 +28,7 @@
 
         .emotion {
             position: relative;
+            cursor: pointer;
 
             &.selected {
                 transform: scale(1.03);
