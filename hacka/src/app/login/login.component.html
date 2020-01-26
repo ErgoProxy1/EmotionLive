@@ -6,8 +6,8 @@
         </div>
         <div class="form-group">
             <input type="password" class="form-control" formControlName="password" required placeholder="PASSWORD">
-            <label class="error">{{errorMessage}}</label>
-            <label class="success">{{successMessage}}</label>
+            <p class="error">{{errorMessage}}</p>
+            <p class="success">{{successMessage}}</p>
         </div>
         <button type="submit" (click)="tryLogin(loginForm)">Login</button>
     </form>
