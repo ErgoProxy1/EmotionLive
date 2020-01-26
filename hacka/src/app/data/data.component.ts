@@ -19,7 +19,7 @@ export class DataComponent implements OnInit {
 	
   ngOnInit() {
     this.title = 'Emotions throughout the Day';
-    this.type = 'PieChart';
+    this.type = 'BarChart';
     this.data = [
       ['Firefox', 45.0],
       ['IE', 26.8],
@@ -30,9 +30,13 @@ export class DataComponent implements OnInit {
     ];
     this.columnNames = ['Browser', 'Percentage'];
     this.options = {   
-		pieHole: 0.4, 
 		chartArea: {width:'75%', height:'75%'},
 		top: 100,
+		animation:{
+			startup: true,
+			easing: 'in',
+			duration: 1000,
+		}
     };
     this.width = 500;
     this.height = 500;
