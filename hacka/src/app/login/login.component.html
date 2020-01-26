@@ -1,13 +1,14 @@
-<form [formGroup]="loginForm">
-    <div class="form-group">
-        <label>Email address</label>
-        <input type="email" formControlName="email" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" formControlName="password" required>
-        <label class="error">{{errorMessage}}</label>
-        <label class="success">{{successMessage}}</label>
-    </div>
-    <button type="submit" (click)="tryLogin(loginForm)">Login</button>
-</form>
+<div>
+    <form [formGroup]="loginForm">
+        <h1>Log In</h1>
+        <div class="form-group">
+            <input type="email" formControlName="email" class="form-control" required placeholder="E-MAIL ADDRESS">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" required placeholder="PASSWORD">
+            <label class="error">{{errorMessage}}</label>
+            <label class="success">{{successMessage}}</label>
+        </div>
+        <button type="submit" (click)="tryLogin(loginForm)">Login</button>
+    </form>
+</div>

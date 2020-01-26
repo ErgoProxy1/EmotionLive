@@ -1,10 +1,10 @@
 <div *ngIf="state === 'pre-game'" class="pre-game">
-  <h1>Recognize emotions</h1>
-  <p>In this game, your objective is to try to match each face to the emotion that it conveys. <br />
-    You have 10 seconds to give your answer.<br />
-    A game contains 10 rounds.</p>
-  <button (click)="startCountdown('timed')">Start playing with time</button>
-  <button (click)="startCountdown('timeless')">Start playing without time</button>
+    <h1>Recognize Emotions</h1>
+    <p>In this game, your objective is to try to match each face to the emotion that it conveys. <br />
+        You have 10 seconds to give your answer.<br />
+        A game contains 10 rounds.</p>
+    <button (click)="startCountdown('timeless')">Start Easy Mode (No Timer)</button>
+    <button (click)="startCountdown('timed')">Start Hard Mode (Timer)</button>
 </div>
 
 <app-countdown *ngIf="state === 'countdown'" (onCountdownEnd)="startGame()"></app-countdown>
@@ -28,6 +28,6 @@
 <div *ngIf="state === 'post-game'" class="post-game">
     <h1>Results</h1>
     <p>You have scored {{score}} out of {{round}}.</p>
-    <button (click)="startCountdown('timed')">Start playing with time</button>
-    <button (click)="startCountdown('timeless')">Start playing without time</button>
-  </div>
+    <button (click)="startCountdown('timeless')">Play Again (Easy)</button>
+    <button (click)="startCountdown('timed')">Play Again (Hard)</button>
+</div>
