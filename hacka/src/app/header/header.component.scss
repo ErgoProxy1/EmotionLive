@@ -50,6 +50,16 @@
       transform: translateX(-100%);
       transition: transform 0.3s;
 
+      .homeIcon {
+          display: inline-block;
+          margin-bottom: 1px;
+      }
+
+      .homeIcon:hover {
+        border-bottom: 1px solid white;
+        margin-bottom: 0px;
+      }
+
       a {
         display: block;
         padding: 4px;
@@ -71,6 +81,7 @@
   .modal {
     display: none;
     position: fixed;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
