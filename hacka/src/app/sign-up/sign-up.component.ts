@@ -36,6 +36,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
         .then(res => {
           this.errorMessage = '';
           this.successMessage = "Your account has been created";
+          this.auth.doLogin(form.value.email, form.value.password);
           this.router.navigateByUrl('/home');
         }, err => {
           this.successMessage = '';

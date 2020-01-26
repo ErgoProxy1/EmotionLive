@@ -227,6 +227,7 @@ export class DataComponent implements OnInit, OnDestroy {
       if (this.auth.fbAuth.auth.currentUser) {
         let date = new Date();
         this.db.firestore.collection('emotions')
+        .where("uid", "==", this.auth.fbAuth.auth.currentUser.uid)
         .where("month", "==", date.getMonth())
         .where("year", "==", date.getFullYear())
         .where("day", "==", date.getDay())
