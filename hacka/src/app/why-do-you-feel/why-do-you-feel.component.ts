@@ -43,6 +43,7 @@ export class WhyDoYouFeelComponent implements OnInit {
 				this.reasons.push(reason);
 			}
 		});
+		console.log(this.reasons);
 	}
 
 	selectReason(reason: Reason): void {
