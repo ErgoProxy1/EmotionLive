@@ -7,6 +7,7 @@
   </div>
   <div class="navigation" [class.show]="showNavigation">
     <a routerLink="/home" (click)="hideNav()" class="homeIcon"><fa-icon [icon]="homeIcon"></fa-icon></a>
+    <a routerLink="/data" (click)="hideNav()">Data of the day</a>
     <div *ngIf="!(auth.user | async)">
       <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
       <a routerLink="/login" (click)="hideNav()">Login</a>

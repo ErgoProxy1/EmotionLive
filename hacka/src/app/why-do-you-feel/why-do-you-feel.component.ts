@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common'; 
 import { ActivatedRoute } from '@angular/router';
-import { REASONS } from '../consts/reasons';
+import { REASONS, Reason } from '../consts/reasons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,8 +11,8 @@ styleUrls: ['./why-do-you-feel.component.scss']
 })
 export class WhyDoYouFeelComponent implements OnInit {
 	@Input() emotion: string = this.route.snapshot.paramMap.get('emotion');
-	reasons: Array<{}>;
-	selectedReason: {};
+	reasons: Array<Reason>;
+	selectedReason: Reason;
 
 	constructor(
 		private route: ActivatedRoute,
@@ -37,8 +37,8 @@ export class WhyDoYouFeelComponent implements OnInit {
 		});
 	}
 
-	selectReason(reason: {}): void {
-		this.selectedReason = reason;
+	selectReason(reason: Reason): void {
+		this.selectedReason == reason ? this.selectedReason = null : this.selectedReason = reason;
 	}
 
 	clickNext() : void {
