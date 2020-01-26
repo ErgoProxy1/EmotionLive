@@ -26,7 +26,17 @@
             margin: auto;
             border: 3px solid black;
             border-radius: 5px;
-            width: 33%;
+            width: 66%;
+
+            @media (min-width: 768px){
+              width: 33%;
+          }
+
+        .image {
+          max-height: 300px;
+          display: block;
+          margin: 0 auto;
+        }
 
         &.time:before {
             content: '';

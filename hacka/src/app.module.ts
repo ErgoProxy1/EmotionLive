@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
@@ -22,6 +23,7 @@ import { SignUpComponent } from './app/sign-up/sign-up.component';
 import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/results-how-do-you-feel.component';
 import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
 import { CountdownComponent } from './app/countdown/countdown.component';
+import { FacialRecognitionComponent } from './app/facial-recognition/facial-recognition.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,13 @@ import { CountdownComponent } from './app/countdown/countdown.component';
     RecognizeEmotionsComponent,
     CountdownComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    FacialRecognitionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'rnifdb'),
