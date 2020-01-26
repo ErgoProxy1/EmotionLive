@@ -91,8 +91,15 @@ export class DataComponent implements OnInit {
           duration: 1000,
         },
         legend: { position: "none" },
-        bar: { groupWidth: "90%" }
-
+		bar: { groupWidth: "90%" },
+		hAxis: {
+			title: 'Emotion',
+		},
+		vAxis: {
+			title: 'Frequency',
+			format: '0',
+			
+		}
       };
       this.widthD = 600;
       this.heightD = 600;
@@ -120,8 +127,15 @@ export class DataComponent implements OnInit {
           duration: 1000,
         },
         legend: { position: "none" },
-        bar: { groupWidth: "90%" }
-
+        bar: { groupWidth: "90%" },
+		hAxis: {
+			title: 'Emotion',
+		},
+		vAxis: {
+			title: 'Frequency',
+			format: '0',
+			
+		}
       };
       this.widthW = 600;
       this.heightW = 600;
@@ -149,8 +163,15 @@ export class DataComponent implements OnInit {
           duration: 1000,
         },
         legend: { position: "none" },
-        bar: { groupWidth: "90%" }
-
+        bar: { groupWidth: "90%" },
+		hAxis: {
+			title: 'Emotion',
+		},
+		vAxis: {
+			title: 'Frequency',
+			format: '0',
+			
+		}
       };
       this.widthM = 600;
       this.heightM = 600;
