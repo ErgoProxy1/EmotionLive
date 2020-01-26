@@ -75,10 +75,23 @@ export class DataComponent implements OnInit, OnDestroy {
     this.errorMessage = '';
   }
 
+	defaultTitle = 'Emotions throughout '
+	date = new Date();
+
+	dayStr = this.date.toDateString();
+
+	monthNames = ["January", "February", "March", "April", "May", "June",
+	"July", "August", "September", "October", "November", "December"
+	];
+
+	monthStr = this.monthNames[this.date.getMonth()];
+
+	yearStr = this.date.getFullYear();
+
   initCharts(): void {
     this.getEmotionsDaily().then(() => {
       // Graph for the day
-      this.titleD = 'Emotions throughout the Day';
+      this.titleD = this.defaultTitle.concat(this.dayStr);
       this.typeD = 'ColumnChart';
       this.dataD = [
         ['Joy', this.joyCountDaily, 'rgb(160, 228, 147)'],
@@ -88,7 +101,7 @@ export class DataComponent implements OnInit, OnDestroy {
         ['Fear', this.fearCountDaily, 'rgb(235, 145, 61)'],
         ['Surprise', this.surpriseCountDaily, 'rgb(236, 222, 142)']
       ];
-      this.columnNamesD = ['Emotion', 'Frequency', { role: 'style' }];
+      this.columnNamesD = ['Emotion', 'Occurences', { role: 'style' }];
       this.optionsD = {
         chartArea: { width: '75%', height: '75%' },
         top: 100,
@@ -116,7 +129,7 @@ export class DataComponent implements OnInit, OnDestroy {
 
     this.getEmotionsMonthly().then(() => {
       // Graph for the week
-      this.titleW = 'Emotions throughout the Month';
+      this.titleW = this.defaultTitle.concat(this.monthStr);
       this.typeW = 'ColumnChart';
       this.dataW = [
         ['Joy', this.joyCountMonthly, 'rgb(160, 228, 147)'],
@@ -126,7 +139,7 @@ export class DataComponent implements OnInit, OnDestroy {
         ['Fear', this.fearCountMonthly, 'rgb(235, 145, 61)'],
         ['Surprise', this.surpriseCountMonthly, 'rgb(236, 222, 142)']
       ];
-      this.columnNamesW = ['Emotion', 'Frequency', { role: 'style' }];
+      this.columnNamesW = ['Emotion', 'Occurences', { role: 'style' }];
       this.optionsW = {
         chartArea: { width: '75%', height: '75%' },
         top: 100,
@@ -154,7 +167,7 @@ export class DataComponent implements OnInit, OnDestroy {
 
     this.getEmotionsYearly().then(() => {
       //Graph for the Month
-      this.titleM = 'Emotions throughout the Year';
+      this.titleM = this.defaultTitle.concat(this.yearStr.toString());
       this.typeM = 'ColumnChart';
       this.dataM = [
         ['Joy', this.joyCountYear, 'rgb(160, 228, 147)'],
@@ -164,7 +177,7 @@ export class DataComponent implements OnInit, OnDestroy {
         ['Fear', this.fearCountYear, 'rgb(235, 145, 61)'],
         ['Surprise', this.surpriseCountYear, 'rgb(236, 222, 142)']
       ];
-      this.columnNamesM = ['Emotion', 'Frequency', { role: 'style' }];
+      this.columnNamesM = ['Emotion', 'Occurences', { role: 'style' }];
       this.optionsM = {
         chartArea: { width: '75%', height: '75%' },
         top: 100,
