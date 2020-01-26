@@ -11,8 +11,15 @@
 <div *ngIf="state === 'game'" class="game">
   <div class="game-container" [class.time]="!displayingResult">
     <img class="image" [src]="correctOption.imageUrl">
-    <div class="option" *ngFor="let option of options" (click)="selectOption(option)" [class.selected]="option === selectedOption">
+    <div class="option" *ngFor="let option of options" 
+      (click)="selectOption(option)" 
+      [class.selected]="option === selectedOption"
+      [class.correct]="displayingResult && option === correctOption"
+      [class.incorrect]="displayingResult && option !== correctOption && option === selectedOption">
       <p>{{option.name | titlecase}}</p>
     </div>
+    <button (click)="displayResults()" [disabled]="!selectedOption"> 
+      Submit
+    </button>
   </div>
 </div>

@@ -8,6 +8,8 @@ import { HomeComponent } from './app/home/home.component';
 import { AboutFaqComponent } from './app/about-faq/about-faq.component'
 import { DataComponent } from './app/data/data.component';
 import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
+import { LoginComponent } from './app/login/login.component';
+import { SignUpComponent } from './app/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +19,9 @@ const routes: Routes = [
   { path: 'recognize-emotions', component: RecognizeEmotionsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-faq', component: AboutFaqComponent },
+  { path: 'login', component: LoginComponent},
+  { path: 'sign-up', component: SignUpComponent},
+  { path: 'results-you-feel', component: ResultsHowDoYouFeelComponent },
   { path: 'data', component: DataComponent }
 ];
 

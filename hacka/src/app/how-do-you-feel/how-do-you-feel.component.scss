@@ -1,50 +1,85 @@
 :host {
-  .emotions-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin-bottom: 20px;
 
-    @media (min-width: 768px){
-      grid-template-columns: 1fr 1fr 1fr;
+    img {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
     }
+  
+    .emotions-list {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0 20px;
+        margin-bottom: 20px;
 
-    .emotion {
+        @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr;
+        }
 
-      p {
-        background: none;
-        font-size: 18px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      }
+        .emotion {
+            position: relative;
 
-      &.joy {
-        background-color: rgb(160, 228, 147);
-      }
+            &.selected {
+                transform: scale(1.03);
+            }
 
-      &.anger {
-        background-color: rgb(230, 113, 113);
-      }
+            &.selected:after {
+                top: -1px;
+                right: -1px;
+                left: -1px;
+                bottom: -1px;
+                content: '';
+                position: absolute;
+                transform: scale(1);
+                border: 3px solid;
+                border-radius: 5px;
+            }
 
-      &.sadness {
-        background-color: rgb(49, 64, 196);
-      }
+            p {
+                background: none;
+                font-size: 18px;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
 
-      &.disgust {
-        background-color: rgb(128, 77, 128);
-      }
+            &.joy {
+                background-color: rgb(160, 228, 147);
+            }
 
-      &.fear {
-        background-color: rgb(235, 145, 61);
-      }
+            &.anger {
+                background-color: rgb(230, 113, 113);
+            }
 
-      &.surprise {
-        background-color: rgb(236, 222, 142);
-      }
+            &.sadness {
+                background-color: rgb(49, 64, 196);
+            }
+
+            &.disgust {
+                background-color: rgb(128, 77, 128);
+            }
+
+            &.fear {
+                background-color: rgb(235, 145, 61);
+            }
+
+            &.surprise {
+                background-color: rgb(236, 222, 142);
+            }
+        }
     }
-  }
 
     .next {
-        width: 60px;
+        margin: 0 20px 20px 0;
+        width: 80px;
         background-color: black;
         border: none;
         color: white;
@@ -57,14 +92,23 @@
         transition-duration: 0.2s;
         border: 1px solid;
 
-        &:hover {
-            background-color: white;
-            color: black;
-        }
-    }
+            &:hover {
+                background-color: white;
+                color: black;
+            }
 
-    .selected {
-        transition-duration: 0.2s;
-        outline-offset: solid 3px;
-    }
+            &:disabled {
+                opacity: 0.4;
+
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
+
+        .selected {
+            transition-duration: 0.2s;
+            outline-offset: solid 3px;
+        }
 }

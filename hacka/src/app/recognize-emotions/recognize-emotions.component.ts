@@ -71,6 +71,8 @@ export class RecognizeEmotionsComponent implements OnInit {
   }
 
   selectOption(option) {
-    this.selectedOption = option;
+    if (!this.displayingResult) {
+      this.selectedOption = option;
+    }
   }
 }

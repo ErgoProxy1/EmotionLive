@@ -1,0 +1,148 @@
+Looking for git in: git
+Using git 2.24.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/christophe/Documents/happy-helperzz
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :hacka/src/app/data/data.component.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/app/data/data.component.ts
+> git show :hacka/src/app/data/data.component.html
+> git show :hacka/src/app/data/data.component.ts
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/services/auth.service.spec.ts
+> git show :hacka/src/services/google.charts/googleCharts.ts
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/services/google.charts/pieCharts.ts
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/services/google.charts/googleCharts.ts
+> git show :hacka/src/services/google.charts/pieCharts.ts
+> git show :hacka/src/app/app.component.ts
+> git show :hacka/src/app/data/data.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/index.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :hacka/src/app/data/data.component.scss
+> git show :hacka/src/app/data/data.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git show :hacka/src/app/data/data.component.ts
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse christophe
+> git rev-parse --symbolic-full-name christophe@{u}
+> git rev-list --left-right christophe...refs/remotes/origin/christophe
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
