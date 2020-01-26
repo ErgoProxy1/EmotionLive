@@ -1,4 +1,29 @@
 <div class="home">
-<h1>Welcome to EmotionLive</h1>
+  <h1>Welcome {{ (auth.user | async)?.displayName }}</h1>
 
-</div>
+  <h2>What is EmotionLive?</h2>
+  <p>
+    EmotionLive is a web application intended to help people with special abilities better communicate their emotions and feelings. It can be very difficult for people with certain needs to properly convey how they feel. In turn, this makes it hard for caretakers, guardians, friends, and family to give proper, well-informed feedback.<br/><br/>
+    This application hopes to facilitate interpersonal communication of primary emotions through a visual and interactive medium. This web application is still very much a proof of concept and in its infancy. Our team hopes that this tool will become useful and helpful to those who need it. Most importantly, we hope that we may make a positive impact on our society.
+  </p>
+
+  <h2>The Idea</h2>
+  <p>
+    This idea was courteously offered to us by one Natacha Rouillon. Having worked with children with abilities during the summer, she sometimes found it hard to properly assess their emotional state. Lacking a proper and resourceful tool to rely on, she turned to thinking up an idea of her own. She granted us the opportunity to work on this and to develop our skills as both programmers and human beings.
+  </p>
+
+  <h2><a routerLink="/login">Log In</a>/<a routerLink="/sign-up">Sign Up</a></h2>
+<p>Users may decide to create an account to enjoy certain features.</p>
+
+<h2><a routerLink="/how-do-you-feel">My Emotions</a></h2>
+<p>This component allows the user to pick and choose which emotion they are currently feeling using colour-coded cards. They will then have the chance to pick the reason they felt this emotion from a default selection or add their own personalized reasons. It is finally presented to the user in a single, concise sentence.</p>
+
+<h2><a routerLink="/recognize-emotions">Recognize Emotions</a></h2>
+<p>This is a fun little game that comes in (currently) two difficulties, one with a timer and one without. It allows the user to practice discerning different emotions from facial features. A side feature that could prove to be both educational and entertaining.</p>
+
+<h2><a routerLink="/facial-recognition">Train Your Own Emotions</a></h2>
+<p>Using the power of Machine Learning, this feature allows the user to act out different emotions into their own personal computer camera. The artifical intelligence will then detect which emotion was most likely displayed. It can be a very useful way to make the user conscious of how they look when they feel a certain way. It can also be a very fun and entertaining distraction. (Acting with friends is fun!)</p>
+
+<h2><a routerLink="/data">Diary of Emotions</a> (Account Required)</h2>
+<p>This allows the user to keep a log of the different emotions they've felt. Different statitics will be available to monitor progression or simply just keep a backlog to reflect upon.</p>
+  </div>

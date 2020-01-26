@@ -1,9 +1,17 @@
+:host {
+    display: block;
+    padding: 20px;
 
-p {
-    margin: 5px;
-    padding: 5px;
-}
+    h1 {
+        text-align: left;
+    }
 
-#answer {
-    overflow: auto;
+    p {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #answer {
+        overflow: auto;
+    }
 }
