@@ -1,11 +1,60 @@
 :host {
-  .reasons-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
 
-    @media (min-width: 768px){
-      grid-template-columns: 1fr 1fr 1fr;
+    img {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
     }
-  }
+
+    .reasons-list {
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        -webkit-user-drag: none;
+        -ms-user-select: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .reason {
+            position: relative;
+
+            &.selected {
+                transform: scale(1.03);
+            }
+
+            &.selected:after {
+                transition-duration: 0.2s;
+                top: -1px;
+                right: -1px;
+                left: -1px;
+                bottom: -1px;
+                content: '';
+                position: absolute;
+                transform: scale(1);
+                border: 3px solid;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    button {
+        margin: 0 20px 20px auto;
+        display: block;
+    }
+
+    .selected {
+        transition-duration: 0.2s;
+        outline-offset: solid 3px;
+    }
 }
