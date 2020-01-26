@@ -8,6 +8,14 @@
         -webkit-user-drag: none;
         -ms-user-select: none;
     }
+
+    fa-icon {
+        font-size: 40px;
+    }
+    .go-back {
+        min-width: 60px;
+        margin: 90px 0 0 20px;
+    }
   
     .emotions-list {
         -webkit-user-select: none; /* Safari */        
@@ -19,21 +27,25 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
-        padding: 0 20px;
+        padding: 40px 20px;
         margin-bottom: 20px;
 
         @media (min-width: 768px){
-        grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         .emotion {
             position: relative;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            border: 2px solid black;
 
             &.selected {
                 transform: scale(1.03);
             }
 
             &.selected:after {
+                transition-duration: 0.2s;
                 top: -1px;
                 right: -1px;
                 left: -1px;
@@ -77,38 +89,13 @@
         }
     }
 
-    .next {
-        margin: 0 20px 20px 0;
-        width: 80px;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
+    button {
+        margin: 0 20px 20px auto;
         display: block;
-        font-size: 16px;
-        margin-left: auto;
+    }
+
+    .selected {
         transition-duration: 0.2s;
-        border: 1px solid;
-
-            &:hover {
-                background-color: white;
-                color: black;
-            }
-
-            &:disabled {
-                opacity: 0.4;
-
-                &:hover {
-                    color: white;
-                    background-color: black;
-                }
-            }
-        }
-
-        .selected {
-            transition-duration: 0.2s;
-            outline-offset: solid 3px;
-        }
+        outline-offset: solid 3px;
+    }
 }

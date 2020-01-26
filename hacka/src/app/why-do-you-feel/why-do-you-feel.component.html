@@ -1,11 +1,20 @@
-<a routerLink="/how-do-you-feel">Go back</a>
+<div>
+    <button (click)="clickBack()" class="go-back"><fa-icon [icon]="angleLeft"></fa-icon></button>
+    <button (click)="updateReasons()" class="go-back">My Reasons</button>
+</div>
 <h1>Why do you feel {{emotion}}?</h1>
 <div class="reasons-list">
-  <div class="card reason {{reason.name}}" *ngFor="let reason of reasons" (click)="selectReason(reason)">
+  <div class="card reason {{reason.name}}" *ngFor="let reason of reasons" (click)="selectReason(reason)"
+  [class.selected]='selectedReason == reason'>
     <img src="{{reason.imageUrl}}" alt="{{reason.reason}}">
     <p>{{reason.reason | titlecase}}</p>
   </div>
+
+  <div class="card reason">
+    <input [(ngModel)]="current_reason">
+    <button (click)="addCustomReason()">+</button>
+  </div>
 </div>
 <div>
-    <a *ngIf="selectedReason" routerLink="/results-how-do-you-feel/{{emotion}}/{{selectedReason.id}}">Results!</a>
+    <button (click)="clickNext();" class="next" [disabled]="!selectedReason">Finish</button>
 </div>

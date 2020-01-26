@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 img {
   max-width: 100%;
 }
@@ -15,7 +19,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -33,14 +38,17 @@ button {
   opacity: 1;
 
   &:hover {
-    background-color: rgb(53, 53, 53);
+    background-color: white;
+    color: black;
     cursor: pointer;
+    transition-duration: 0.3s;
   }
 
   &:disabled {
     transition: background-color 0.2s, opacity 0.3;
     opacity: 0.3;
     background-color: black;
+    color: white;
     cursor: initial;
   }
 }

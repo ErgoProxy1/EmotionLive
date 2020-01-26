@@ -1,5 +1,8 @@
-<a routerLink="/home">Go back</a>
-<h1>How do you feel?</h1>
+<div>
+    <button (click)="clickBack()" class="go-back"><fa-icon [icon]="angleLeft"></fa-icon></button>
+</div>
+
+<h1>What Do You Feel?</h1>
 <div class="emotions-list">
   <div class="card emotion {{ emotion.name }}"
     *ngFor="let emotion of emotionChoices"
