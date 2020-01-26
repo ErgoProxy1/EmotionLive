@@ -1,0 +1,36 @@
+:host {
+
+    div {
+        text-align: center;
+
+        form {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            border: solid 5px black;
+            width: 500px;
+            height: 300px;
+            border-radius: 5pt;
+            text-align: center;
+        
+            input {
+                transition-duration: 0.2s;
+                margin: 10px 5px 5px 5px;
+                border: solid 2px black;
+                border-radius: 5pt;
+                height: 30px;
+                width: 300px;
+                padding: 5px 10px 5px 10px;
+
+                &:hover {
+                    transform: scale(1.03);
+                    transition-duration: 0.2s;
+                }
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+    
+}
