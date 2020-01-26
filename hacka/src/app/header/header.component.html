@@ -1,11 +1,12 @@
 <header>
   <div class="top-bar">
-    <a class="logo" routerLink="/home">Emotion App</a>
+    <a class="logo" routerLink="/home" title="Home">Emotion App</a>
     <button type="button" class="hamburger" (click)="toggleNav()">
       <img src="./assets/hamburger.png" />
     </button>
   </div>
   <div class="navigation" [class.show]="showNavigation">
+    <a routerLink="/home" (click)="hideNav()"><fa-icon [icon]="homeIcon"></fa-icon></a>
     <div *ngIf="!(auth.user | async)">
       <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
       <a routerLink="/login" (click)="hideNav()">Login</a>

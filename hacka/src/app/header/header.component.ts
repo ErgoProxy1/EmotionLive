@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/services/auth.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { AuthService } from 'src/services/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  homeIcon = faHome;
   showNavigation: boolean = false;
   constructor(private auth: AuthService) { }
 
