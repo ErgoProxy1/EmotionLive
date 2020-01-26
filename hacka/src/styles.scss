@@ -29,11 +29,19 @@ button {
   font-family: 'Montserrat', Arial;
   font-weight: bold;
   font-size: 18px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, opacity 0.3;
+  opacity: 1;
 
   &:hover {
     background-color: rgb(53, 53, 53);
     cursor: pointer;
+  }
+
+  &:disabled {
+    transition: background-color 0.2s, opacity 0.3;
+    opacity: 0.3;
+    background-color: black;
+    cursor: initial;
   }
 }
 

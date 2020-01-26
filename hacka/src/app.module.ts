@@ -20,6 +20,8 @@ import { HeaderComponent } from './app/header/header.component';
 import { LoginComponent } from './app/login/login.component';
 import { SignUpComponent } from './app/sign-up/sign-up.component';
 import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/results-how-do-you-feel.component';
+import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
+import { CountdownComponent } from './app/countdown/countdown.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,11 @@ import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/resu
     HeaderComponent,
     ResultsHowDoYouFeelComponent,
     DataComponent,
+    HeaderComponent,
+    RecognizeEmotionsComponent,
+    CountdownComponent,
     LoginComponent,
-    SignUpComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
