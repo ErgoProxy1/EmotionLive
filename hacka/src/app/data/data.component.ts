@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from 'src/services/auth.service';
 import { EmotionData } from './emotionData';
@@ -9,9 +9,11 @@ import { firestore } from 'firebase/app';
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.scss']
 })
-export class DataComponent implements OnInit {
+export class DataComponent implements OnInit, OnDestroy {
 
   constructor(private db: AngularFirestore, private auth: AuthService) { }
+
+  errorMessage: string = '';
 
   emotionDataDay: EmotionData[] = [];
   emotionDataMonth: EmotionData[] = [];
@@ -68,6 +70,11 @@ export class DataComponent implements OnInit {
     this.showCharts = false;
   }
 
+  ngOnDestroy() {
+    this.showCharts = false;
+    this.errorMessage = '';
+  }
+
   initCharts(): void {
     this.getEmotionsDaily().then(() => {
       // Graph for the day
@@ -103,11 +110,13 @@ export class DataComponent implements OnInit {
       };
       this.widthD = 600;
       this.heightD = 600;
+    }).catch(()=>{
+      this.errorMessage = 'You must be logged in to view your diary!'
     });
 
     this.getEmotionsMonthly().then(() => {
       // Graph for the week
-      this.titleW = 'Emotions throughout the Week';
+      this.titleW = 'Emotions throughout the Month';
       this.typeW = 'ColumnChart';
       this.dataW = [
         ['Joy', this.joyCountMonthly, 'rgb(160, 228, 147)'],
@@ -139,11 +148,13 @@ export class DataComponent implements OnInit {
       };
       this.widthW = 600;
       this.heightW = 600;
+    }).catch(()=>{
+      this.errorMessage = 'You must be logged in to view your diary!'
     });
 
     this.getEmotionsYearly().then(() => {
       //Graph for the Month
-      this.titleM = 'Emotions throughout the Month';
+      this.titleM = 'Emotions throughout the Year';
       this.typeM = 'ColumnChart';
       this.dataM = [
         ['Joy', this.joyCountYear, 'rgb(160, 228, 147)'],
@@ -177,6 +188,8 @@ export class DataComponent implements OnInit {
       this.heightM = 600;
 
       this.showCharts = true;
+    }).catch(()=>{
+      this.errorMessage = 'You must be logged in to view your diary!'
     });
   }
 
