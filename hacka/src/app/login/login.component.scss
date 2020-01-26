@@ -1,5 +1,9 @@
 :host {
 
+    & > div {
+        padding-top: 20px;
+    }
+
     div {
         text-align: center;
         &.login {
