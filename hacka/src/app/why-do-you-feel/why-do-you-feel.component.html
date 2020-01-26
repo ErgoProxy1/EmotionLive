@@ -1,5 +1,6 @@
 <div>
     <button (click)="clickBack()" class="go-back"><fa-icon [icon]="angleLeft"></fa-icon></button>
+    <button (click)="updateReasons()" class="go-back">My Reasons</button>
 </div>
 <h1>Why do you feel {{emotion}}?</h1>
 <div class="reasons-list">
@@ -7,6 +8,11 @@
   [class.selected]='selectedReason == reason'>
     <img src="{{reason.imageUrl}}" alt="{{reason.reason}}">
     <p>{{reason.reason | titlecase}}</p>
+  </div>
+
+  <div class="card reason">
+    <input [(ngModel)]="current_reason">
+    <button (click)="addCustomReason()">+</button>
   </div>
 </div>
 <div>
