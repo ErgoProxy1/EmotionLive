@@ -6,14 +6,15 @@
     </button>
   </div>
   <div class="navigation" [class.show]="showNavigation">
+    <a routerLink="/home" (click)="hideNav()" class="homeIcon"><fa-icon [icon]="homeIcon"></fa-icon></a>
     <a routerLink="/data" (click)="hideNav()">Data of the day</a>
-    <a routerLink="/home" (click)="hideNav()"><fa-icon [icon]="homeIcon"></fa-icon></a>
     <div *ngIf="!(auth.user | async)">
       <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
       <a routerLink="/login" (click)="hideNav()">Login</a>
     </div>
     <a routerLink="/how-do-you-feel" (click)="hideNav()">Express emotions</a>
-    <a routerLink="/how-do-you-feel" (click)="hideNav()">Recognize emotions</a>
+    <a routerLink="/recognize-emotions" (click)="hideNav()">Recognize emotions</a>
+    <a routerLink="/about-faq" (click)="hideNav()">FAQ</a>
     <div *ngIf="(auth.user | async)">
       <a (click)="hideNav(); logout()">Logout</a>
     </div>
