@@ -39,7 +39,7 @@ export class RecognizeEmotionsComponent implements OnInit {
   initRound = () => {
     this.getOptions();
     this.displayingResult = false;
-    if (this.round < 3) {
+    if (this.round < 5) {
       if (this.gametype === 'timed') {
         this.timeout = setTimeout(this.displayRoundResults, 10000);
       }

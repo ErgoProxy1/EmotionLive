@@ -1,6 +1,6 @@
 <header>
   <div class="top-bar">
-    <a class="logo" routerLink="/home" title="Home">Emotion Live</a>
+    <a class="logo" routerLink="/home" title="Home">EmotionLive</a>
     <button type="button" class="hamburger" (click)="toggleNav()">
       <img src="./assets/hamburger.png" />
     </button>
@@ -14,8 +14,8 @@
     <a routerLink="/how-do-you-feel" (click)="hideNav()">My Emotions</a>
     <a routerLink="/recognize-emotions" (click)="hideNav()">Recognize Emotions</a>
     <a routerLink="/facial-recognition" (click)="hideNav()">Train Your Own Emotions</a>
-    <a routerLink="/data" (click)="hideNav()">Feelings Diary</a>
-    <a routerLink="/about-faq" (click)="hideNav()">FAQ</a>
+    <a routerLink="/data" (click)="hideNav()">Diary of Emotions</a>
+    <a routerLink="/about-faq" (click)="hideNav()">About Us</a>
     <div *ngIf="(auth.user | async)">
       <a (click)="hideNav(); logout()">Logout</a>
     </div>
