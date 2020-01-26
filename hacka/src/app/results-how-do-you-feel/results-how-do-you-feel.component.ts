@@ -35,24 +35,15 @@ export class ResultsHowDoYouFeelComponent implements OnInit {
 
   pushToDB() {
     if (this.auth.fbAuth.auth.currentUser) {
+      let date = new Date();
       this.db.firestore.collection('emotions').doc(this.db.createId()).set({
         uid: this.auth.fbAuth.auth.currentUser.uid,
         reason: this.reason.reason,
         emotion: this.emotion,
-        date: firestore.Timestamp.now()
+        year: date.getFullYear(),
+        month: date.getMonth(),
+        day: date.getDay()
       })
     }
   }
-
-  getTest() {
-    if (this.auth.fbAuth.auth.currentUser) {
-      this.db.firestore.collection('emotions').where("uid", "==", this.auth.fbAuth.auth.currentUser.uid).get().then((querry) => {
-        querry.forEach((doc) => {
-          console.log(doc.data());
-          console.log(doc.data().date.toDate())
-        })
-      })
-    }
-  }
-
 }
