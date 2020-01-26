@@ -1,7 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Location } from '@angular/common'; 
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { REASONS } from '../consts/reasons';
+import { REASONS, Reason } from '../consts/reasons';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AuthService } from 'src/services/auth.service';
+import { firestore } from 'firebase/app';
 
 @Component({
   selector: 'app-results-how-do-you-feel',
@@ -11,19 +14,34 @@ import { REASONS } from '../consts/reasons';
 export class ResultsHowDoYouFeelComponent implements OnInit {
   @Input() emotion: string = this.route.snapshot.paramMap.get('emotion');
   @Input() reasonId: string = this.route.snapshot.paramMap.get('id');
-  reason: {};
+  reason: Reason = { id: 0, emotions: ['', ''], reason: '', imageUrl: '' };
+
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private db: AngularFirestore,
+    private auth: AuthService
   ) { }
 
   ngOnInit() {
     REASONS.forEach(reason => {
       if (this.reasonId === reason.id.toString()) {
         this.reason = reason;
+        this.pushToDB();
       }
     });
+  }
+
+  pushToDB() {
+    if (this.auth.fbAuth.auth.currentUser) {
+      this.db.collection('emotions').doc(this.db.createId()).set({
+        uid: this.auth.fbAuth.auth.currentUser.uid,
+        reason: this.reason.reason,
+        emotion: this.emotion,
+        date: firestore.Timestamp.now()
+      })
+    }
   }
 
 }

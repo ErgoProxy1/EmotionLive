@@ -1,4 +1,11 @@
-export const REASONS = [
+export interface Reason{
+  id: number,
+  emotions: string[],
+  reason: string,
+  imageUrl: string
+}
+
+export const REASONS: Reason[] = [
   { id: 1, emotions: ['anger', 'sadness'], reason: 'someone was mean', imageUrl: '/' },
   { id: 2, emotions: ['anger', 'sadness', 'surprise'], reason: 'something broke', imageUrl: '/' },
   { id: 3, emotions: ['anger', 'sadness'], reason: 'you miss someone', imageUrl: '/' },
