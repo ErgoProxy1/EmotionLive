@@ -9,11 +9,14 @@ import { RECOGNIZABLE_EMOTIONS } from '../consts/recognizableEmotions';
 export class RecognizeEmotionsComponent implements OnInit {
   state: string;
   displayingResult: boolean;
+  gametype;
 
+  score;
   round: number;
   correctOption;
   selectedOption;
   options;
+  timeout;
 
   constructor() { }
 
@@ -21,13 +24,15 @@ export class RecognizeEmotionsComponent implements OnInit {
     this.state = 'pre-game'
   }
 
-  startCountdown() {
+  startCountdown(gametype) {
+    this.gametype = gametype;
     this.state = 'countdown';
   }
 
   startGame(): void {
     this.state = 'game';
     this.round = 0;
+    this.score = 0;
     this.initRound();
   }
 
@@ -35,10 +40,12 @@ export class RecognizeEmotionsComponent implements OnInit {
     this.getOptions();
     this.displayingResult = false;
     if (this.round < 3) {
-      setTimeout(this.displayRoundResults, 10000);
+      if (this.gametype === 'timed') {
+        this.timeout = setTimeout(this.displayRoundResults, 10000);
+      }
       this.round++;
     } else {
-      this.state = 'pre-game';
+      this.state = 'post-game';
     }
   }
 
@@ -67,6 +74,9 @@ export class RecognizeEmotionsComponent implements OnInit {
 
   displayRoundResults = () => {
     this.displayingResult = true;
+    if (this.correctOption === this.selectedOption) {
+      this.score++;
+    }
     setTimeout(this.initRound, 3000);
   }
 
@@ -74,5 +84,12 @@ export class RecognizeEmotionsComponent implements OnInit {
     if (!this.displayingResult) {
       this.selectedOption = option;
     }
+  }
+
+  displayResults() {
+    if (this.gametype === 'timed') {
+      clearTimeout(this.timeout);
+    }
+    this.displayRoundResults();
   }
 }

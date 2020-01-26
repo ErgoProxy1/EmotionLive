@@ -1,9 +1,15 @@
 :host {
-  .pre-game {
+  .pre-game,
+  .post-game {
     padding: 20px;
     
     p {
       margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto 20px 0;
     }
   }
 
