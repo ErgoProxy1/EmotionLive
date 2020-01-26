@@ -24,6 +24,7 @@ import { ResultsHowDoYouFeelComponent } from './app/results-how-do-you-feel/resu
 import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
 import { CountdownComponent } from './app/countdown/countdown.component';
 import { FacialRecognitionComponent } from './app/facial-recognition/facial-recognition.component';
+import { FooterComponent } from './app/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FacialRecognitionComponent } from './app/facial-recognition/facial-reco
     CountdownComponent,
     LoginComponent,
     SignUpComponent,
-    FacialRecognitionComponent
+    FacialRecognitionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
