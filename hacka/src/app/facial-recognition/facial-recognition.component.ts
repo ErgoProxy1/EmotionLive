@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, OnDestroy } from '@angular/core';
 import { DataService } from '../data.service';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -8,13 +8,14 @@ import { catchError, map, tap } from 'rxjs/operators';
   templateUrl: './facial-recognition.component.html',
   styleUrls: ['./facial-recognition.component.scss']
 })
-export class FacialRecognitionComponent implements OnInit {
+export class FacialRecognitionComponent implements OnInit, OnDestroy {
   @ViewChild('video', { static: true }) videoElement: ElementRef;
   @ViewChild('canvas', { static: true }) canvas: ElementRef;
 
   videoWidth = 0;
   videoHeight = 0;
   img;
+  stream;
   dataUrl;
   faceApiResponse;
   intreval;
@@ -31,6 +32,13 @@ export class FacialRecognitionComponent implements OnInit {
     this.intreval = setInterval(this.capture, 500);
   }
 
+  ngOnDestroy() {
+    clearInterval(this.intreval);
+    this.stream.getTracks().forEach(function(track) {
+      track.stop();
+    });
+  }
+
   startCamera() {
     if (navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ audio: false, video: true })
@@ -44,6 +52,7 @@ export class FacialRecognitionComponent implements OnInit {
   }
 
   attachVideo(stream) {
+    this.stream = stream;
     this.renderer.setProperty(this.videoElement.nativeElement, 'srcObject', stream);
     this.renderer.listen(this.videoElement.nativeElement, 'play', (event) => {
       this.videoHeight = this.videoElement.nativeElement.videoHeight;
