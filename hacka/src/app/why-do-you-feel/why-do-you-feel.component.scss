@@ -46,41 +46,15 @@
                 border-radius: 5px;
             }
         }
+    }
 
-        /*.next {
-            margin: 0 20px 20px 0;
-            width: 80px;
-            background-color: black;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            font-size: 16px;
-            margin-left: auto;
-            transition-duration: 0.2s;
-            border: 1px solid;
-    
-            &:hover {
-                background-color: white;
-                color: black;
-            }
+    button {
+        margin: 0 20px 20px auto;
+        display: block;
+    }
 
-            &:disabled {
-                opacity: 0.4;
-
-                &:hover {
-                    color: white;
-                    background-color: black;
-                }
-            }
-
-            .selected {
-                transition-duration: 0.2s;
-                outline-offset: solid 3px;
-            }
-        }*/
-
+    .selected {
+        transition-duration: 0.2s;
+        outline-offset: solid 3px;
     }
 }
