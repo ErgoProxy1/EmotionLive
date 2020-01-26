@@ -1,0 +1,29 @@
+:host {
+  .pre-game {
+    padding: 20px;
+    
+    p {
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: inline-block;
+      margin: 0 10px 20px 0;
+    }
+
+    .result {
+      display: inline-block;
+      margin: 0;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    video {
+      border: 3px solid black;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+}

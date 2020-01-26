@@ -1,0 +1,16 @@
+<div class="pre-game">
+  <h1>Train facial expressions</h1>
+  <p>In this game, can try to make different expressions at the camera. An A.I. will tell you which emotion you most closely seem to express.<br />
+    This game has no time limit.<br/>
+    Have as much fun as you want.</p>
+  <button (click)="scanImage()" >Get emotion</button>
+  <p class="result" *ngIf="faceApiResponse | async">
+    Your current emotion is <span>{{emotion | titlecase }}</span>
+  </p>
+
+  <div id="container">
+    <video #video class="vid" autoplay></video>
+    <canvas #canvas class="vid vid-canvas" style="display: none;"></canvas>
+  </div>
+  <img class="facial-image" style="display: none;"/>
+</div>

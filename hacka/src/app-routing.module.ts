@@ -10,6 +10,7 @@ import { DataComponent } from './app/data/data.component';
 import { RecognizeEmotionsComponent } from './app/recognize-emotions/recognize-emotions.component';
 import { LoginComponent } from './app/login/login.component';
 import { SignUpComponent } from './app/sign-up/sign-up.component';
+import { FacialRecognitionComponent } from './app/facial-recognition/facial-recognition.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'why-do-you-feel/:emotion', component: WhyDoYouFeelComponent },
   { path: 'results-how-do-you-feel/:emotion/:id', component: ResultsHowDoYouFeelComponent },
   { path: 'recognize-emotions', component: RecognizeEmotionsComponent },
+  { path: 'facial-recognition', component: FacialRecognitionComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-faq', component: AboutFaqComponent },
   { path: 'login', component: LoginComponent},
