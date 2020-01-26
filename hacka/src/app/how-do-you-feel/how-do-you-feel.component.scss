@@ -8,6 +8,14 @@
         -webkit-user-drag: none;
         -ms-user-select: none;
     }
+
+    fa-icon {
+        font-size: 40px;
+    }
+    .go-back {
+        min-width: 60px;
+        margin: 90px 0 0 20px;
+    }
   
     .emotions-list {
         -webkit-user-select: none; /* Safari */        
@@ -19,7 +27,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
-        padding: 0 20px;
+        padding: 40px 20px;
         margin-bottom: 20px;
 
         @media (min-width: 768px){

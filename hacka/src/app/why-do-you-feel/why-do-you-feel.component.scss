@@ -9,6 +9,15 @@
         -ms-user-select: none;
     }
 
+    fa-icon {
+        font-size: 40px;
+    }
+    
+    .go-back {
+        min-width: 60px;
+        margin: 90px 0 0 20px;
+    }
+
     .reasons-list {
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */
@@ -25,6 +34,7 @@
         @media (min-width: 768px){
             grid-template-columns: 1fr 1fr 1fr;
         }
+
 
         .reason {
             position: relative;
