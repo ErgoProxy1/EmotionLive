@@ -6,6 +6,7 @@
     </button>
   </div>
   <div class="navigation" [class.show]="showNavigation">
+    <a routerLink="/data" (click)="hideNav()">Data of the day</a>
     <a routerLink="/home" (click)="hideNav()"><fa-icon [icon]="homeIcon"></fa-icon></a>
     <div *ngIf="!(auth.user | async)">
       <a routerLink="/sign-up" (click)="hideNav()">Sign Up</a>
