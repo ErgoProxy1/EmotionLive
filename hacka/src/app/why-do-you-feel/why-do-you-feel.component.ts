@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { REASONS, Reason } from '../consts/reasons';
 import { Router } from '@angular/router';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 selector: 'app-why-do-you-feel',
@@ -13,6 +14,7 @@ export class WhyDoYouFeelComponent implements OnInit {
 	@Input() emotion: string = this.route.snapshot.paramMap.get('emotion');
 	reasons: Array<Reason>;
 	selectedReason: Reason;
+	angleLeft = faAngleLeft;
 
 	constructor(
 		private route: ActivatedRoute,
@@ -44,5 +46,9 @@ export class WhyDoYouFeelComponent implements OnInit {
 	clickNext() : void {
 		this.router.navigateByUrl(`results-how-do-you-feel/${ this.emotion }/${ this.selectedReason.id }`)
 	}
+
+	clickBack() : void {
+        this.router.navigateByUrl('/how-do-you-feel');
+    }
 
 }

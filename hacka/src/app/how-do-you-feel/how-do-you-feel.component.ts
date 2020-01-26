@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmotionChoice } from '../classes/emotionChoice';
 import { EmotionChoices } from '../consts/emotionChoices';
 import { Router } from '@angular/router';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-how-do-you-feel',
@@ -12,6 +13,8 @@ import { Router } from '@angular/router';
 export class HowDoYouFeelComponent implements OnInit {
     emotionChoices: EmotionChoice[] = EmotionChoices;
     selectedEmotion: EmotionChoice;
+    angleLeft = faAngleLeft;
+
 
     constructor(private router : Router) { }
 
@@ -23,6 +26,10 @@ export class HowDoYouFeelComponent implements OnInit {
     }
 
     clickNext() : void {
-        this.router.navigateByUrl(`why-do-you-feel/${this.selectedEmotion.name}`)
+        this.router.navigateByUrl(`why-do-you-feel/${this.selectedEmotion.name}`);
+    }
+
+    clickBack() : void {
+        this.router.navigateByUrl('/home');
     }
 }
