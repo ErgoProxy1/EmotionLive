@@ -2,6 +2,9 @@
 By Christophe Couturier, Tommy Josépovic, Jaafar Kaoussarani, and Weiliang Xie.
 Special thanks to Natacha Rouillon.
 
+## Try it out
+https://rightnowifeel.web.app/#/home
+
 ## Introduction
 ### What is EmotionLive?
 EmotionLive is a web application intended to help people with special abilities better communicate their emotions and feelings. Mental wellbeing and mental health is extremely important and it can be a harrowing experience for people who have difficulty in every day situations. It can be very difficult for people with certain needs to properly convey how they feel. In turn, this makes it hard for caretakers, guardians, friends, and family to give proper, well-informed feedback. This application hopes to facilitate interpersonal communication of primary emotions through a visual and interactive medium. This web application is still very much a proof of concept and in its infancy. Our team hopes that this tool will become useful and helpful to those who need it. Most importantly, we hope that we may make a positive impact on our society.
